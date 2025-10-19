@@ -1,4 +1,4 @@
 # Računalniški praktikum
-fokus na naslovno vrstico: cmd + L
-izbriši trenutno vrstico: cmd + shift + K
-odpri imenik: cmd + O
+Fokus na naslovno vrstico: cmd + L
+Izbriši trenutno vrstico: cmd + shift + K
+Odpri imenik: cmd + O
