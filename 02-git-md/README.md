@@ -6,16 +6,16 @@
 <!-- 2. nivojski razdelek -->
 ## Bližnjice na tipkovnici
 
-- **Kopiraj** označeno v odložišče: Ctrl+C (**C**opy)
-- **Izreži**označeno v odložišče: Ctrl+X
-- **Prilepi** vsebino odložišča: Ctrl+V
+- * *Kopiraj* * označeno v odložišče: Ctrl+C (**C**opy)
+- * *Izreži* * označeno v odložišče: Ctrl+X
+- * *Prilepi* * vsebino odložišča: Ctrl+V
 - Fokus na naslovno vrstico: cmd + L
 - Izbriši trenutno vrstico: cmd + shift + K
 - Odpri imenik: cmd + O
 <!-- 2. nivojski razdelek -->
 ## Izvorna koda
 
-Včasih pride prav značka <kdb>kbd</kdb> za tipke. Značko uporabimo takole:
+Včasih pride prav značka <kdb>Kbd</kdb> za tipke. Značko uporabimo takole:
 
 <!-- začetek bloka z izvorno kodo -->
 <kbd>Ctrl</kbd>
