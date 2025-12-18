@@ -16,7 +16,7 @@
 
 \title{Izdelava urnikov}
 \author{Nejc Širovnik}
-\date{14. 10. 2019}
+\date{14.10.2019}
 \maketitle
 
 
@@ -75,6 +75,7 @@ matematika.
 % Namig: pomagajte si z iskanjem in zamenjavo komentarjev, kot so v spodnjem primeru.
 
 % začetek okolja verbatim
+\begin{verbatim}
 <profesor>
    <ime>Janez</ime>
    <priimek>Novak</priimek>
@@ -83,6 +84,8 @@ matematika.
       <steviloUrNaTeden>3</steviloUrNaTeden>
    </predmet>
 </profesor>
+\end{verbatim}
+
 % konec okolja verbatim
 
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
@@ -92,7 +95,7 @@ Hierarhija značk omogoča enostavno vnašanje podatkov, hkrati pa poskrbi za pr
 Še enostavnejše je dostopanje do posameznih podatkov, saj večina programskih jezikov že
 vsebuje metode za delo z XML datotekami.
 
-Pri objektno orientiranih programskih jezikih (Delphi, C++, Java) vse vhodne podatke
+\noindent Pri objektno orientiranih programskih jezikih (Delphi, C++, Java) vse vhodne podatke
 opišemo s posameznimi razredi. Poglejmo, katere razrede je smiselno implementirati ter
 katere podatke naj vsebujejo.
 
@@ -106,25 +109,25 @@ katere podatke naj vsebujejo.
 % Da bodo prikazani ležeče, uporabite ukaz `\emph`. 
 % Kot pri razdelkih si pomagajte z orodjem _Replace_ in regularnimi izrazi - 
 % prav vam bo prišel isti vzorec za poljuben niz znakov, le da bo zdaj obdan z dvema poševnicama.
-
-   Razred /Profesor/ vsebuje osebne podatke profesorja (ime in priimek) ter
+\begin{itemize}
+   \item Razred \emph{Profesor} vsebuje osebne podatke profesorja (ime in priimek) ter
    podatke o predmetih, ki jih predava. Hkrati moramo za vsako uro v tednu vedeti, če
    je profesor takrat že zaseden, da mu slučajno ne bi dodelili dveh predavanj v istem
    časovnem terminu. To je najlažje preverjati s pomočjo tabele zasedenosti, ki je
    podrobneje opisana na koncu poglavja.
 
-   Razred /Skupina/ predstavlja skupino študentov. Kot podatke torej potrebujemo
+   \item Razred \emph{Skupina} predstavlja skupino študentov. Kot podatke torej potrebujemo
    smer skupine (npr. pedagoška matematika) ter število študentov v njej. Podobno kot pri
    profesorjih, tudi tukaj potrebujemo tabelo zasedenosti.
 
-   Razred /Predavalnica/ nosi podatke o kapaciteti predavalnice, njeno oznako
+   \item Razred \emph{Predavalnica} nosi podatke o kapaciteti predavalnice, njeno oznako
    ter podatke o zasedenosti, ki so predstavljeni s tabelo.
 
-   Razred /Predmet/ vsebuje podatke o posameznih predmetih. Kot podatke tega
+   \item Razred \emph{Predmet} vsebuje podatke o posameznih predmetih. Kot podatke tega
    objekta je smiselno navesti ime predmeta ter tedensko število ur njegove izvedbe.
    Zanima nas tudi, katerim skupinam je predmet namenjen, ter v katerem semestru se bo
    predaval.
-
+\end{itemize}
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
 % To popravite z ukazom `\noindent` ali pa tako, da odstranite prazno vrstico.
 % (Nekoliko lepše izgleda, če v prazno vrstico vstavite % za komentar.)
@@ -154,7 +157,7 @@ le metodo, ki naključno prireja termine posameznim predmetom. Težava pri takš
 je, da pri naključnem vstavljanju nismo upoštevali nobenih omejitev, prav zadoščanje omejitvam
 pa je tisto, kar odlikuje dober urnik.
 
-Stroge omejitve % podpodrazdelek
+\subsubsection{Stroge omejitve}% podpodrazdelek
 
 Verjetno še niste videli profesorja, ki vsakih pet minut teče iz ene predavalnice v drugo,
 ker so mu izdelalovalci urnika dodelili dve predavanji v istem časovnem terminu. Razlog
@@ -184,7 +187,7 @@ dodeljevanje t.i. prekrivanj. Če želi algoritem dodeliti predavanje določeni 
 mora najprej v tabeli zasedenosti preveriti, če je v tistem terminu le-ta še na voljo,
 sicer se vstavljanje ne izvede.
 
-Šibke omejitve % podpodrazdelek
+\subsubsection{Šibke omejitve} % podpodrazdelek
 
 V splošnem ne zahtevamo, da urnik zadošča vsem šibkim omejitvam, ker je to praktično neizvedljivo.
 Resda pa so prav šibke omejitve tiste, ki določajo kakovost urnika, in dober algoritem bo
@@ -371,7 +374,7 @@ je torej množica vseh možnih zamenjav srečanj v trenutnem urniku.
 okolic sistema opravimo na nekem koraku optimizacijskega postopka. Oboroženi z novimi pojmi
 se podajmo v naslednje vrstice.
 
-Lokalno vzpenjanje % podpodrazdelek
+\subsubsection{Lokalno vzpenjanje} % podpodrazdelek
 
 Lokalno vzpenjanje temelji na opazkah, da izbira širšega sistema okolic prinaša kakovostnejše
 rešitve. Sistem okolic v primeru urnika predstavljajo prej omenjene operacije vstavljanja,
@@ -434,7 +437,7 @@ Slabost do sedaj obravnavanih tehnik še vedno ostaja - ko enkrat obtičimo v lo
 maksimumu, se iz njega ne moremo rešiti. Naslednja metoda poskuša na svojevrsten, a zelo
 sistematičen način odpraviti to težavo.
 
-Iskanje s tabuji % podpodrazdelek
+\subsubsection{Iskanje s tabuji} % podpodrazdelek
 
 Že samo ime spominja na prepovedi, ki jih le-ta skriva v svojem naročju. Kaj sploh prepovedujemo?
 Glede na to, da bi naj iskanje s tabuji odpravilo problem vračanja v isti lokalni maksimum,
